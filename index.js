@@ -7,6 +7,11 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
+app.get('/hello', (req, res) => {
+    res.send('Hello from new route!');
+});
+
+
 app.get('/health', (req, res) => {
     res.send('Service is healthy!');
 });
