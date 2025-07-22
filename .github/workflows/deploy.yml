@@ -21,7 +21,8 @@ jobs:
         run: npm ci
 
       - name: Zip application
-        run: zip -r function.zip . -x '.git*' 'node_modules/*' 'function.zip'
+        run: |
+          zip -r function.zip . -x '.git*' '.github*' 'function.zip'
 
       - name: Deploy to AWS Lambda
         uses: appleboy/lambda-action@v0.2.0
